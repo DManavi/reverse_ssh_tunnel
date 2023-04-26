@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "rssh_01",
+      "exec_mode": "fork",
+
+      "script": "ssh",
+      "args": "user@host -p 22 -vvv -i /path/to/id_rsa -R 2221:localhost:22 -N -v",
+      "autorestart": true,
+      "restart_delay": 3000
+    }
+  ]
+}
